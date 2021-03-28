@@ -1,15 +1,16 @@
-import "./App.css";
 import mapboxgl from "mapbox-gl/dist/mapbox-gl-dev";
 import { useEffect, useState, useRef } from "react";
 import { trackPromise, usePromiseTracker } from "react-promise-tracker";
+
 import auth from "@planet/client/api/auth";
 import filter from "@planet/client/api/filter";
 import items from "@planet/client/api/items";
-import { email, password, key, mbAccess } from "./_config";
 import * as topojson from "topojson-client";
 
 import DatePickerContainer from "./DatePicker";
 import Loading from "./Loading";
+
+import { email, password, key, mbAccess } from "./_config";
 
 const l3Topo = require("./data/L3PermRoute.json");
 const getL3 = () => topojson.feature(l3Topo, "l3PermRtMerge");
