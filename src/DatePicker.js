@@ -11,12 +11,12 @@ const DatePickerContainer = (props) => {
   };
 
   return (
-    <div>
+    <div className="datePicker">
       <DatePicker
-        className="datePicker"
         onChange={changeDate}
         value={date}
         clearIcon={null}
+        autoFocus={true}
       />
     </div>
   );

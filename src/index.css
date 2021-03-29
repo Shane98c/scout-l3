@@ -16,7 +16,28 @@ body {
 }
 
 .datePicker {
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  transform: translate(-50%);
+}
+
+.react-date-picker__wrapper {
   background-color: white;
+  border-radius: 4px;
+  border: none !important;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23) !important;
+}
+
+.react-calendar {
+  border-radius: 4px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23) !important;
+}
+
+.react-date-picker__calendar.react-date-picker__calendar--open {
+  left: 50% !important;
+  transform: translate(-50%) !important;
+  margin-bottom: 10px;
 }
 
 .loader {
@@ -26,10 +47,14 @@ body {
   width: 50px;
   height: 50px;
   animation: spin 1s linear infinite;
-  position: fixed; /* or absolute */
-  top: 50%;
-  left: 50%;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: fixed;
 }
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);

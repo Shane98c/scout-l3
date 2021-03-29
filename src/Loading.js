@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import DatePicker from "react-date-picker";
+import React from "react";
 
 const Loading = () => {
   return <div className="loader"></div>;

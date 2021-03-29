@@ -36,7 +36,8 @@ const addPlanetLayer = (map, url) => {
     type: "raster",
     tiles: [url],
     minzoom: 0,
-    maxzoom: 16,
+    maxzoom: 19,
+    attribution: "© Planet Labs",
   });
   map.addLayer(
     {
@@ -44,7 +45,7 @@ const addPlanetLayer = (map, url) => {
       type: "raster",
       source: "Planet",
       minzoom: 0,
-      maxzoom: 18,
+      maxzoom: 19,
       layout: {
         visibility: "visible",
       },
@@ -81,9 +82,7 @@ const getPlanetTileUrl = async (queryFilter) => {
     filter: queryFilter,
   });
   let tileUrl = "https://tiles.planet.com/data/v1/PSScene4Band/";
-  footprints.map((fp) => {
-    tileUrl += fp.id + ",";
-  });
+  footprints.forEach((fp) => (tileUrl += fp.id + ","));
   tileUrl += "/{z}/{x}/{y}.png?api_key=";
   tileUrl += key;
   return tileUrl;
