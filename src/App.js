@@ -50,7 +50,7 @@ const addPlanetLayer = (map, url) => {
         visibility: "visible",
       },
     },
-    "l3"
+    "road-label-simple"
   );
 };
 
